@@ -8,7 +8,7 @@ Summary:	Project Builder aka pb is a tool to produce packages for multiple distr
 Summary(fr):	Project Builder ou pb produit des paquets pour diverses distributions
 
 Name:		project-builder
-Version:	0.9.6
+Version:	0.9.7.1
 Release:	%mkrel 1
 License:	GPL
 Group:		System/Configuration/Packaging
