@@ -4,11 +4,11 @@
 %define perlvendorlib %(eval "`%{__perl} -V:installvendorlib`"; echo $installvendorlib)
 %define srcname project-builder
 
-Summary:	Project Builder aka pb is a tool to produce packages for multiple distributions
+Summary:	Project Builder helps providing multi-OSes Continuous Packaging
 Summary(fr):	Project Builder ou pb produit des paquets pour diverses distributions
 
 Name:		project-builder
-Version:	0.9.7.1
+Version:	0.9.9
 Release:	%mkrel 1
 License:	GPL
 Group:		System/Configuration/Packaging
@@ -16,13 +16,15 @@ Url:		http://trac.project-builder.org
 Source:		ftp://ftp.project-builder.org/src/%{srcname}-%{version}.tar.gz
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(id -u -n)
 BuildArch:	noarch
-Requires:	perl >= 5.8.4, perl-DateManip, perl-ProjectBuilder, rpm-build,  
+Requires:	perl >= 5.8.4,perl-DateManip,perl-ProjectBuilder,rpm-build, 
 
 %description
-Project Builder aka pb helps producing packages
-for multiple distributions. It does that by minimizing
+ProjectBuilder aka pb helps producing packages
+for multiple OSes (Linux distributions, Solaris, ...).
+It does that by minimizing
 the duplication of information required and
 a set a very simple configuration files.
+It implements a Continuous Packaging approach.
 
 %description -l fr
 Project Builder ou pb est un programme pour produire des paquets pour 
@@ -38,7 +40,7 @@ et par un jeu de fichiers de configuration très simples.
 make
 
 %install
-%{__rm} -rf %{buildroot}
+%{__rm} -rf $RPM_BUILD_ROOT
 make DESTDIR=${RPM_BUILD_ROOT} install
 find ${RPM_BUILD_ROOT} -type f -name perllocal.pod -o -name .packlist -o -name '*.bs' -a -size 0 | xargs rm -f
 find ${RPM_BUILD_ROOT} -type d -depth | xargs rmdir --ignore-fail-on-non-empty
@@ -47,7 +49,7 @@ find ${RPM_BUILD_ROOT} -type d -depth | xargs rmdir --ignore-fail-on-non-empty
 make test
 
 %clean
-%{__rm} -rf %{buildroot}
+%{__rm} -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root)
@@ -58,4 +60,3 @@ make test
 %{_bindir}/*
 %{_mandir}/man1/*
 %{_mandir}/man3/*
-
