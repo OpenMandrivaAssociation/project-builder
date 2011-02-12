@@ -8,7 +8,7 @@ Summary:	Project Builder helps providing multi-OSes Continuous Packaging
 Summary(fr):	Project Builder ou pb produit des paquets pour diverses distributions
 
 Name:		project-builder
-Version:	0.9.10
+Version:	0.10.1
 Release:	%mkrel 1
 License:	GPL
 Group:		System/Configuration/Packaging
@@ -16,7 +16,7 @@ Url:		http://trac.project-builder.org
 Source:		ftp://ftp.project-builder.org/src/%{srcname}-%{version}.tar.gz
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(id -u -n)
 BuildArch:	noarch
-Requires:	perl >= 5.8.4,perl-DateManip,perl-ProjectBuilder,rpm-build, 
+Requires:	perl >= 5.8.4,perl-DateManip,perl-ProjectBuilder >= 0.10.1,rpm-build, 
 
 %description
 ProjectBuilder aka pb helps producing packages
