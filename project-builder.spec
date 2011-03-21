@@ -26,12 +26,6 @@ the duplication of information required and
 a set a very simple configuration files.
 It implements a Continuous Packaging approach.
 
-%description -l fr
-Project Builder ou pb est un programme pour produire des paquets pour 
-diverses distributions.
-Il réalise cela en minimisant la duplication des informations requises 
-et par un jeu de fichiers de configuration très simples.
-
 %prep
 %setup -q
 
