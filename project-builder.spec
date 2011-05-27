@@ -8,7 +8,7 @@ Summary:	Project Builder helps providing multi-OSes Continuous Packaging
 Summary(fr):	Project Builder ou pb produit des paquets pour diverses distributions
 
 Name:		project-builder
-Version:	0.11.2
+Version:	0.11.3
 Release:	%mkrel 1
 License:	GPL
 Group:		System/Configuration/Packaging
