@@ -12,7 +12,7 @@ Version:	0.12.5
 Release:	1
 License:	GPL
 Group:		System/Configuration/Packaging
-Url:		http://trac.project-builder.org
+Url:		https://trac.project-builder.org
 Source:		ftp://ftp.project-builder.org/src/%{srcname}-%{version}.tar.gz
 BuildArch:	noarch
 Requires:	perl >= 5.8.4
